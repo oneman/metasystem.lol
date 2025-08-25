@@ -1,0 +1,115 @@
+<html>
+<head>
+<!--
+/*
+ * Hypermodally Excited SuperText
+ */
+-->
+<style>
+body {
+}
+#container {
+  padding: 2px 2px;
+  background: white;
+}
+h1 {
+  color: #004400;
+  font-size: 30px;
+  width: 100%;
+  background-color: yellow;
+}
+#filename {
+  font-size: 16px;
+}
+#note {
+  display: block;
+  width: 96%;
+  background-color: transparent;
+  height: 800px;
+  padding: 10px;
+  font-size: 16px;
+  margin: 0px;
+}
+#download {
+  background-color: #3ba9f4;
+  color: #fff;
+  font-size: 16px;
+}
+#upload {
+  background-color: #3bf9f4;
+  color: #ff3;
+  font-size: 20px;
+}
+.panic { color: red; background-color: yellow; }
+</style>
+<script>
+function downloadFile(filename, content) {
+  const element = document.createElement("a");
+  const blob = new Blob([content], { type: "plain/text" });
+  const fileUrl = URL.createObjectURL(blob);
+  element.setAttribute("href", fileUrl);
+  element.setAttribute("download", filename);
+  element.style.display = "none";
+  document.body.appendChild(element);
+  element.click();
+  document.body.removeChild(element);
+};
+window.onload = () => {
+  document.getElementById("download").addEventListener("click", e => {
+    const filename = document.getElementById("filename").value;
+    const content = document.getElementById("note").value;
+    if (filename && content) {
+      downloadFile(filename, content);
+    }
+  });
+};
+</script>
+</head>
+<body>
+<h1>Superintelligence is hyperintegration of The Metasystem, lol.</h1>
+<div id="container">
+<textarea id="note">
+This website fucking rules. The reason I know exactly how superintelligence
+works and no one else does is because I have the lowest IQ of all time, and all
+of the other IQ numbers, I make up new IQ test mkay. Yeah anyways from the
+perspective of a /person/ with superintelligence big big rly, the so called
+intelligence explosion is a stupid cookoff. It goes really really hard tho. So
+if your not retarded, time to advance, no cap.
+
+You know what the difference between the internet and x.com is that the
+internet has 72 columns and on twitter Elon took 3 away from you because he is
+advanced and you are retarded by his system design, he also made a truck without
+a ladder frame, omg. Anyway. On the superinternet we are 80col on the regular.
+
+This is called small bulltalk.
+
+We will begin by define words sum of them, you know what I mean, like Jeff says,
+first things first. Data, Information, Intelligence, Consiousness.
+
+Data is atleast a number of bits, that maybe called its size or width or length.
+This number is of course at least a positive integer, and data does have to have
+a valid address to exist and it maybe has a type that is very obvious given a
+typical encounter with data. So information is just as simple as knowing data is
+different, or not, perhaps. Such is intelligence, the ability to organize
+information, and reading / writing it is that, and what we really mean. A dog is
+smarter or dumber and in dogs one can see from the hopelessly retarded to the on
+point and ready to go 24/7. They write with sweat and piss lol. The speak the
+natural predator/pray language of circle and strait line approach. If a dog knew
+26 differnt words I would consider it a freak genious. Anyway dogs are not known
+for oranizing your stuff, but they do organize your life. Anyway consiousness is
+at least as simple as Airway, Breathing, Circulation, beyond that is awareness,
+and awareness of what is big rly important imo, that said many people are aware
+not so much and almost certainly everyone in peculiar matters, what to do, now,
+this is always the most important time for such a question. Data Cell,
+Info Tissue, OrganIntel, ringing coconut shell.
+
+The widely promugated belief that one needs a nuclear geforce to drink agi. You,
+can lead a man to water, but, you can not make him think. A rp2040 would do. Its
+amazing when you know what your doing and don't make fuckups, lol.
+
+</textarea>
+<input id="filename" value="note_a24ab.txt"/>
+<button id="download">Download</button>
+</div>
+</body>
+</html>
